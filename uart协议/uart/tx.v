@@ -97,7 +97,7 @@ always @(posedge clk or negedge rstn)begin
         START : tx_r <= 1'b0;
         DATA  : tx_r <= tx_data_r[bit_cnt_r];
         CHECK : tx_r <= ^{tx_data_r,CHECK_MODE};
-        default tx_r <= 1'b1
+        default tx_r <= 1'b1;
     endcase
 end
 //----------------------------------------
